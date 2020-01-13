@@ -12,9 +12,6 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-            max: {
-                default: 1
-			},
             decrease: {
                 default: 0.05     
 			},
@@ -22,7 +19,10 @@ cc.Class({
                 default: 0.4
 			},
             serious_warning: {
-                default: 0.2     
+                default: 0.2    
+			},
+            time_in_seconds: {
+                default: 0.25     
 			},
 
 
@@ -52,9 +52,19 @@ cc.Class({
     },
 
     update (dt) {
-        date = new Date()
-        prev_date = date.getTime()
-        gameOver = false
+        time+=dt; 
+        if(time / dt >= length_time)
+        { 
+           current_breath -= decrease
+        }
+        if (current_breath > warning) {
+            // add exclamation points
+		}
+        if (current_breath > serious_warning) {
+            // add more exclamation points/ serious warnings
 
-    },
+    };
+
+    this.schedule(timer,0,cc.macro.REPEAT_FOREVER);
+    }
 });
