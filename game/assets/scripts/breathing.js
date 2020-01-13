@@ -12,6 +12,20 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
+            max: {
+                default: 1
+			},
+            decrease: {
+                default: 0.05     
+			},
+            warning: {
+                default: 0.4
+			},
+            serious_warning: {
+                default: 0.2     
+			},
+
+
         // foo: {
         //     // ATTRIBUTES:
         //     default: null,        // The default value will be used only when the component attaching
@@ -37,5 +51,10 @@ cc.Class({
 
     },
 
-    // update (dt) {},
+    update (dt) {
+        date = new Date()
+        prev_date = date.getTime()
+        gameOver = false
+
+    },
 });
