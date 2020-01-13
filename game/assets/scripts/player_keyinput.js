@@ -10,26 +10,31 @@
 
 cc.Class({
     extends: cc.Component,
-    onLoad: function startevent() {
+    onLoad: function () {
         // add key down and key up event
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
+        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, this.onKeyUp, this);
     },
 
     destroy () {
         cc.systemEvent.off(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
+        cc.systemEvent.off(cc.SystemEvent.EventType.KEY_UP, this.onKeyUp, this);
         this._super()
     },
 
-    onKeyDown: function movePlayer(event) {
+    onKeyDown: function moveManatee(event) {
         switch(event.keyCode) {
             case cc.macro.KEY.a:
-                node.position.X -= 100;
+                this.node.x -= 100;
                 break;
             case cc.macro.KEY.d:
+                this.node.x += 100;
                 break;
             case cc.macro.KEY.w:
+                this.node.y += 100
                 break;
             case cc.macro.KEY.s:
+                this.node.y -= 100;
                 break;
         }
     },
