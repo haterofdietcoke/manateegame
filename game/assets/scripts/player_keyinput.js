@@ -10,6 +10,11 @@
 
 cc.Class({
     extends: cc.Component,
+
+    properties: {
+        speed: 10
+	},
+
     onLoad: function () {
         // add key down and key up event
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
@@ -25,16 +30,16 @@ cc.Class({
     onKeyDown: function moveManatee(event) {
         switch(event.keyCode) {
             case cc.macro.KEY.a:
-                this.node.x -= 100;
+                this.node.x -= this.speed;
                 break;
             case cc.macro.KEY.d:
-                this.node.x += 100;
+                this.node.x += this.speed;
                 break;
             case cc.macro.KEY.w:
-                this.node.y += 100
+                this.node.y += this.speed
                 break;
             case cc.macro.KEY.s:
-                this.node.y -= 100;
+                this.node.y -= this.speed;
                 break;
         }
     },
