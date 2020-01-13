@@ -12,18 +12,18 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-            max {
+            max: {
                 default: 1
 			},
-            decrease {
+            decrease: {
                 default: 0.05     
 			},
-            warning {
+            warning: {
                 default: 0.4
 			},
-            serious_warning {
+            serious_warning: {
                 default: 0.2     
-			}
+			},
 
 
         // foo: {
@@ -55,9 +55,6 @@ cc.Class({
         date = new Date()
         prev_date = date.getTime()
         gameOver = false
-        while (!gameOver) {
-              if 
-		}
 
     },
 });
