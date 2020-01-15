@@ -13,13 +13,13 @@ cc.Class({
 
     properties: {
             decrease: {
-                default: 0.05			
+                default: 0.2			
             },
             warning: {
-                default: 0.4
+                default: 0.5
 			},
             serious_warning: {
-                default: 0.2     
+                default: 0.25     
 			},
 
 
