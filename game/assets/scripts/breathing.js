@@ -13,7 +13,8 @@ cc.Class({
 
     properties: {
             decrease: {
-                default: 0.05			},
+                default: 0.05			
+            },
             warning: {
                 default: 0.4
 			},
@@ -48,10 +49,13 @@ cc.Class({
     },
     
     update: function (dt) {
-    var progress = this.progressBar.progress;
+    var progressBar = this.getComponent(cc.ProgressBar)
+    var progress = progressBar.progress;
+    console.log(progress)
     if (progress > 0) {
         progress -= this.decrease * dt;
+        console.log(progress)
     }
-    this.progressBar.progress = progress;
+    progressBar.progress = progress;
     },
 });
