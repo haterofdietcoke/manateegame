@@ -51,10 +51,11 @@ cc.Class({
 
     },
 
-    update (dt) {
-        date = new Date()
-        prev_date = date.getTime()
-        gameOver = false
-
+    update: function (dt) {
+    var progress = progressBar.progress;
+    if (progress > 0) {
+        progress -= dt;
+    }
+    progressBar.progress = progress;
     },
 });
