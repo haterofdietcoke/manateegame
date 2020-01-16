@@ -21,14 +21,6 @@ cc.Class({
             serious_warning: {
                 default: 0.25     
 			},
-            manatee: {
-                default: null,
-                type: cc.Node
-            },
-            breath_location: {
-                default: null,
-                type: cc.Node
-            },
 
 
         // foo: {
@@ -63,14 +55,6 @@ cc.Class({
     if (progress > 0) {
         progress -= this.decrease * dt;
         console.log(progress)
-        if (progress < 0.75) {
-            var dx = this.breath_location.x - this.manatee.x;
-            var dy = this.breath_location.y - this.manatee.y;
-            var mx = dx * dt;
-            var my = dy * dt;
-            this.manatee.x += mx;
-            this.manatee.y += my;
-        }
     }
     progressBar.progress = progress;
     },
