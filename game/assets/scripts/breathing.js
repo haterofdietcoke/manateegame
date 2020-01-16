@@ -12,23 +12,23 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-            decrease: {
-                default: 0.2			
-            },
-            warning: {
-                default: 0.5
-			},
-            serious_warning: {
-                default: 0.25     
-			},
-            manatee: {
-                default: null,
-                type: cc.Node
-            },
-            breath_location: {
-                default: null,
-                type: cc.Node
-            },
+        decrease: {
+            default: 0.2
+        },
+        warning: {
+            default: 0.5
+        },
+        serious_warning: {
+            default: 0.25
+        },
+        manatee: {
+            default: null,
+            type: cc.Node
+        },
+        breath_location: {
+            default: null,
+            type: cc.Node
+        },
 
 
         // foo: {
@@ -52,26 +52,26 @@ cc.Class({
 
     // onLoad () {},
 
-    start () {
+    start() {
 
     },
-    
+
     update: function (dt) {
-    var progressBar = this.getComponent(cc.ProgressBar)
-    var progress = progressBar.progress;
-    console.log(progress)
-    if (progress > 0) {
-        progress -= this.decrease * dt;
+        var progressBar = this.getComponent(cc.ProgressBar)
+        var progress = progressBar.progress;
         console.log(progress)
-        if (progress == 0.75) {
-            var dx = this.breath_location.x - this.manatee.x;
-            var dy = this.breath_location.y - this.manatee.y;
-            var mx = dx * dt;
-            var my = dy * dt;
-            this.manatee.x += mx;
-            this.manatee.y += my;
+        if (progress > 0) {
+            progress -= this.decrease * dt;
+            console.log(progress)
+            if (progress < 0.75) {
+                var dx = this.breath_location.x - this.manatee.x;
+                var dy = this.breath_location.y - this.manatee.y;
+                var mx = dx * dt;
+                var my = dy * dt;
+                this.manatee.x += mx;
+                this.manatee.y += my;
+            }
         }
-    }
-    progressBar.progress = progress;
+        progressBar.progress = progress;
     },
 });
