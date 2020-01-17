@@ -21,6 +21,10 @@ cc.Class({
         serious_warning: {
             default: 0.25
         },
+        target: {
+            default: null,
+            type: cc.Node
+        },
         manatee: {
             default: null,
             type: cc.Node
@@ -53,24 +57,22 @@ cc.Class({
     // onLoad () {},
 
     start() {
-
+        
     },
 
     update: function (dt) {
         var progressBar = this.getComponent(cc.ProgressBar)
         var progress = progressBar.progress;
-        console.log(progress)
+        console.log("Manatee Coordinates: ", this.manatee.x, this.manatee.y)
         if (progress > 0) {
             progress -= this.decrease * dt;
-            console.log(progress)
-            if (progress < 0.75) {
-                var dx = this.breath_location.x - this.manatee.x;
-                var dy = this.breath_location.y - this.manatee.y;
-                var mx = dx * dt;
-                var my = dy * dt;
-                this.manatee.x += mx;
-                this.manatee.y += my;
-            }
+        }
+        
+        this.breath_location.getParent().convertToWorldSpace(this.manatee.getPosition())
+        var distance = this.breath_location.y - this.manatee.y
+        distance = distance.abs()
+        if (distance <= 5) {
+            progress = 1
         }
         progressBar.progress = progress;
     },
