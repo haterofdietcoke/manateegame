@@ -63,12 +63,12 @@ cc.Class({
     update: function (dt) {
         var progressBar = this.getComponent(cc.ProgressBar)
         var progress = progressBar.progress;
-        console.log("Manatee Coordinates: ", this.manatee.x, this.manatee.y)
+        console.log(progress)
         if (progress > 0) {
             progress -= this.decrease * dt;
         }
         
-        this.breath_location.getParent().convertToWorldSpace(this.manatee.getPosition())
+        this.breath_location.getParent().convertToWorldSpaceAR(this.manatee.getPosition())
         var distance = this.breath_location.y - this.manatee.y
         distance = Math.abs(distance)
         if (distance <= 5) {
