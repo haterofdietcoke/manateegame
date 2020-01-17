@@ -70,7 +70,7 @@ cc.Class({
         
         this.breath_location.getParent().convertToWorldSpace(this.manatee.getPosition())
         var distance = this.breath_location.y - this.manatee.y
-        distance = math.abs(distance)
+        distance = Math.abs(distance)
         if (distance <= 5) {
             progress = 1
         }
