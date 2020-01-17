@@ -21,6 +21,9 @@
       },
       {
         "__id__": 33
+      },
+      {
+        "__id__": 38
       }
     ],
     "_active": true,
@@ -798,7 +801,7 @@
       "array": [
         0,
         0,
-        209.72248968796455,
+        216.65069291824005,
         0,
         0,
         0,
@@ -1294,7 +1297,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "manatee_breath",
+    "_name": "energy_bar",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
@@ -1302,21 +1305,15 @@
     "_children": [
       {
         "__id__": 34
-      },
-      {
-        "__id__": 36
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 42
+        "__id__": 36
       },
       {
-        "__id__": 43
-      },
-      {
-        "__id__": 44
+        "__id__": 37
       }
     ],
     "_prefab": null,
@@ -1342,7 +1339,7 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        40.504,
+        121.512,
         305.026,
         0,
         0,
@@ -1351,7 +1348,7 @@
         1,
         2,
         2,
-        1
+        2
       ]
     },
     "_eulerAngles": {
@@ -1365,7 +1362,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "9ecbwGHwpDVKhJj5rb6yi9"
+    "_id": "1f26Z6i/BNQY4SzUwiVJ90"
   },
   {
     "__type__": "cc.Node",
@@ -1427,7 +1424,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "3bBudNPhdDAbq4oelcJA5N"
+    "_id": "01xi+1FK9CLqMRq/mnEnxA"
   },
   {
     "__type__": "cc.Sprite",
@@ -1459,30 +1456,79 @@
     "_fillRange": 0,
     "_isTrimmedMode": true,
     "_atlas": null,
-    "_id": "59rT69uJVDfIGNiMNkgXJq"
+    "_id": "37Mq/RTsNOELa6IO88x6Nz"
+  },
+  {
+    "__type__": "cc.Sprite",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 33
+    },
+    "_enabled": true,
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
+    "_srcBlendFactor": 770,
+    "_dstBlendFactor": 771,
+    "_spriteFrame": {
+      "__uuid__": "dea858df-4195-4f0c-860f-666f4f0a2076"
+    },
+    "_type": 1,
+    "_sizeMode": 0,
+    "_fillType": 0,
+    "_fillCenter": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_fillStart": 0,
+    "_fillRange": 0,
+    "_isTrimmedMode": true,
+    "_atlas": null,
+    "_id": "e5xrzo1wxFpadrh0xcgVZW"
+  },
+  {
+    "__type__": "cc.ProgressBar",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 33
+    },
+    "_enabled": true,
+    "_N$totalLength": 105,
+    "_N$barSprite": {
+      "__id__": 35
+    },
+    "_N$mode": 1,
+    "_N$progress": 1,
+    "_N$reverse": false,
+    "_id": "99pxrRHJFPX7teXp66L1fO"
   },
   {
     "__type__": "cc.Node",
     "_name": "manatee_breath",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 33
+      "__id__": 1
     },
     "_children": [
       {
-        "__id__": 37
+        "__id__": 39
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 39
-      },
-      {
-        "__id__": 40
-      },
-      {
         "__id__": 41
+      },
+      {
+        "__id__": 42
+      },
+      {
+        "__id__": 43
       }
     ],
     "_prefab": null,
@@ -1509,14 +1555,14 @@
       "ctor": "Float64Array",
       "array": [
         40.504,
-        0,
+        305.026,
         0,
         0,
         0,
         0,
         1,
-        1,
-        1,
+        2,
+        2,
         1
       ]
     },
@@ -1531,20 +1577,20 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "1f26Z6i/BNQY4SzUwiVJ90"
+    "_id": "9ecbwGHwpDVKhJj5rb6yi9"
   },
   {
     "__type__": "cc.Node",
     "_name": "bar",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 36
+      "__id__": 38
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 38
+        "__id__": 40
       }
     ],
     "_prefab": null,
@@ -1593,14 +1639,14 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "01xi+1FK9CLqMRq/mnEnxA"
+    "_id": "3bBudNPhdDAbq4oelcJA5N"
   },
   {
     "__type__": "cc.Sprite",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 37
+      "__id__": 39
     },
     "_enabled": true,
     "_materials": [
@@ -1625,85 +1671,14 @@
     "_fillRange": 0,
     "_isTrimmedMode": true,
     "_atlas": null,
-    "_id": "37Mq/RTsNOELa6IO88x6Nz"
+    "_id": "59rT69uJVDfIGNiMNkgXJq"
   },
   {
     "__type__": "cc.Sprite",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 36
-    },
-    "_enabled": true,
-    "_materials": [
-      {
-        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
-      }
-    ],
-    "_srcBlendFactor": 770,
-    "_dstBlendFactor": 771,
-    "_spriteFrame": {
-      "__uuid__": "dea858df-4195-4f0c-860f-666f4f0a2076"
-    },
-    "_type": 1,
-    "_sizeMode": 0,
-    "_fillType": 0,
-    "_fillCenter": {
-      "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
-    },
-    "_fillStart": 0,
-    "_fillRange": 0,
-    "_isTrimmedMode": true,
-    "_atlas": null,
-    "_id": "e5xrzo1wxFpadrh0xcgVZW"
-  },
-  {
-    "__type__": "cc.ProgressBar",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 36
-    },
-    "_enabled": true,
-    "_N$totalLength": 105,
-    "_N$barSprite": {
       "__id__": 38
-    },
-    "_N$mode": 1,
-    "_N$progress": 1,
-    "_N$reverse": false,
-    "_id": "99pxrRHJFPX7teXp66L1fO"
-  },
-  {
-    "__type__": "f96e5118qBMYI0s8WQDo80v",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 36
-    },
-    "_enabled": true,
-    "decrease": 0.05,
-    "warning": 0.5,
-    "serious_warning": 0.25,
-    "target": {
-      "__id__": 24
-    },
-    "manatee": {
-      "__id__": 21
-    },
-    "breath_location": {
-      "__id__": 28
-    },
-    "_id": "0eAgnEFcBJiLl4ed8zva60"
-  },
-  {
-    "__type__": "cc.Sprite",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 33
     },
     "_enabled": true,
     "_materials": [
@@ -1735,12 +1710,12 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 33
+      "__id__": 38
     },
     "_enabled": true,
     "_N$totalLength": 105,
     "_N$barSprite": {
-      "__id__": 35
+      "__id__": 40
     },
     "_N$mode": 1,
     "_N$progress": 1,
@@ -1752,7 +1727,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 33
+      "__id__": 38
     },
     "_enabled": true,
     "decrease": 0.05,
