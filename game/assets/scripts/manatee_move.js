@@ -33,26 +33,17 @@ cc.Class({
     },
 
     update(dt) {
-        var progress = this.breath_bar.getComponent(cc.ProgressBar.progress)
+        var progress = this.breath_bar.getComponent(cc.ProgressBar).progress
         var dx = this.target.x - this.node.x;
         var dy = this.target.y - this.node.y;
         var mx = dx * dt;
         var my = dy * dt;
-        if (progress < 0.75) {
-            if (my < prev_target_y) {
-                if (progress < 0.25) {
-                    my = my / 8
-                }
-                else if (progress < 0.5) {
-                    my = my / 4
-                } else {
-                    my = my / 2
-                }
+        if (progress < 0.75 && dy < 0) {
+            my = my * progress
 
-            }
         }
         this.node.x += mx;
         this.node.y += my;
-        var prev_target_y = this.target.y
+
     },
 });
