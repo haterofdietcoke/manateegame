@@ -63,7 +63,7 @@ cc.Class({
     update: function (dt) {
         var progressBar = this.getComponent(cc.ProgressBar)
         var progress = progressBar.progress;
-        console.log(progress)
+        //console.log(progress)
         if (progress > 0) {
             progress -= this.decrease * dt;
         }
