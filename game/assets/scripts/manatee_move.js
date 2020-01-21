@@ -41,7 +41,6 @@ cc.Class({
         if (progress < 0.75 && dy < 0) {
             my = my * progress
         }
-        
         this.node.x += mx;
         this.node.y += my;
     },
