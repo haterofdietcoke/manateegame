@@ -12,24 +12,16 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        speed: {
-            default: 15
-        }
+        
     },
 
-    // LIFE-CYCLE CALLBACKS:
+    start: function () {
+        var scene = cc.director.getScene();
+        var node = cc.instantiate(this.node);
 
-    // onLoad () {},
-
-    start () {
-        this.node.setPosition(0, 500)
+        node.parent = scene;
+        node.setPosition(100, 100);
     },
 
-    update(dt) { 
-        if (this.node.x < 4000) {
-            this.node.x += 10
-        } else {
-            this.node.setPosition(0, 500)
-        }
-    },
+    // update (dt) {},
 });
