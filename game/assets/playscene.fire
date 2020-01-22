@@ -989,7 +989,6 @@
       "__id__": 17
     },
     "_enabled": true,
-    "speed": 15,
     "_id": "7f6uzouKJErrsNmMB2MNtn"
   },
   {
@@ -1233,7 +1232,7 @@
       "array": [
         0,
         0,
-        342.1917811694212,
+        209.5962736218504,
         0,
         0,
         0,
@@ -1453,6 +1452,9 @@
     "speed": 10,
     "breath_bar": {
       "__id__": 38
+    },
+    "breath_location": {
+      "__id__": 44
     },
     "_id": "d8q7aI2u1EdY37gIA+oKBW"
   },
