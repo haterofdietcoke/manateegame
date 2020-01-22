@@ -1826,7 +1826,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 231.27,
+      "width": 0,
       "height": 50.4
     },
     "_anchorPoint": {
@@ -1877,8 +1877,8 @@
       }
     ],
     "_useOriginalSize": false,
-    "_string": "Breathe here",
-    "_N$string": "Breathe here",
+    "_string": "",
+    "_N$string": "",
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
