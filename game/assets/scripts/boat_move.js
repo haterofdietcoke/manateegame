@@ -1,20 +1,8 @@
-// Learn cc.Class:
-//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/class.html
-//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/class.html
-// Learn Attribute:
-//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
-//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/reference/attributes.html
-// Learn life-cycle callbacks:
-//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
-//  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
-
 cc.Class({
     extends: cc.Component,
 
     properties: {
-        speed: {
-            default: 15
-        }
+
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -22,14 +10,14 @@ cc.Class({
     // onLoad () {},
 
     start () {
-        this.node.setPosition(0, 500)
+        this.node.setPosition(0, 500);
+        var moveTo = cc.moveTo(5, 1099, 500);
+        var time = cc.delayTime(Math.random() * 5);
+        var moveBack = cc.moveTo(0, 0, 500);
+        var seq = cc.sequence(moveTo, time, moveBack);
+        var action = cc.repeatForever(seq);
+        this.node.runAction(action);
     },
 
-    update(dt) { 
-        if (this.node.x < 4000) {
-            this.node.x += 10
-        } else {
-            this.node.setPosition(0, 500)
-        }
-    },
+    // update(dt) {},
 });
