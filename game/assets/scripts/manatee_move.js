@@ -21,7 +21,10 @@ cc.Class({
             default: null,
             type: cc.Node
         },
-
+        breath_location: {
+            default: null,
+            type: cc.Node
+        },
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -33,6 +36,7 @@ cc.Class({
     },
 
     update(dt) {
+        this.breath_location.getParent().convertToWorldSpaceAR(this.target.getPosition())
         var progress = this.breath_bar.getComponent(cc.ProgressBar).progress
         var dx = this.target.x - this.node.x;
         var dy = this.target.y - this.node.y;
@@ -41,7 +45,10 @@ cc.Class({
         if (progress < 0.75 && dy < 0) {
             my = my * progress
         }
-        this.node.x += mx;
-        this.node.y += my;
+        if (this.node.y + my < this.breath_location.y) {
+            this.node.x += mx;
+            this.node.y += my;
+        }
+       
     },
 });
