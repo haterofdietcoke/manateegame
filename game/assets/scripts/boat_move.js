@@ -25,11 +25,11 @@ cc.Class({
         this.node.setPosition(0, 500)
     },
 
-    update(dt) {
-        time = cc.delayTime(Math.floor(Math.random() * 10))
-        auto moveTo = MoveTo::create(2, Vec2(1099, 500)); \
-        auto moveBack = MoveTo::create(0, Vec2(0, 500))
-        var sequence = cc.sequence(time, moveTo);
-        var action = cc.repeatForever(sequence);
+    update(dt) { 
+        if (this.node.x < 4000) {
+            this.node.x += 10
+        } else {
+            this.node.setPosition(0, 500)
+        }
     },
 });
