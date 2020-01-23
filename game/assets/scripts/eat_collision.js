@@ -10,13 +10,16 @@
 
 cc.Class({
     extends: cc.Component,
-    
+
     properties: {
-        spriteFrame: {
+        source: {
             default: null,
-            type: cc.SpriteFrame
+            type: cc.Node
         },
-        amount_of_grass: 100,
+        energy_bar: {
+            default: null,
+            type: cc.ProgressBar
+        }
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -24,25 +27,15 @@ cc.Class({
     // onLoad () {},
 
     start() {
-        var i;
-        for (i = 0; i < this.amount_of_grass; i++) {
-            var newgrass = new cc.Node('grass');
-
-            var collider = newgrass.addComponent(cc.CircleCollider);
-            collider.radius = 2;
-
-            var sp = newgrass.addComponent(cc.Sprite);
-            sp.spriteFrame = this.spriteFrame;
-            var x = Math.random() * 860 + 30;
-            var y = Math.random() * 120 + 15;
-            newgrass.x = x;
-            newgrass.y = y;
-            newgrass.scale = 2;
-
-            newgrass.parent = this.node;
-
-        }
+        var manager = cc.director.getCollisionManager();
+        manager.enabled = true;
     },
 
-    // update (dt) {},
+    onCollisionEnter: function (other, self) {
+        if (other.node.name === 'grass' && self.tag == 1) {
+            console.log('ate grass');
+            this.energy_bar.progress += 0.05;
+            other.node.destroy();
+        }
+    },
 });
