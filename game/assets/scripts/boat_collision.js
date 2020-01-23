@@ -30,7 +30,7 @@ cc.Class({
 
     onCollisionEnter: function (other, self) {
         console.log("COLLISION!")
-        if (other.node.name === "boat") {
+        if (other.node.name === "boat" && self.tag == 1) {
             var progressBar = this.breath_bar.getComponent(cc.ProgressBar);
             progressBar.progress -= 0.5;
             var tint = cc.repeat(cc.sequence(cc.tintTo(0.25, 255, 0, 0), cc.tintTo(0.25, 255, 255, 255)), 3);
