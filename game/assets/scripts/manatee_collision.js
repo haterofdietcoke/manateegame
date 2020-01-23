@@ -16,7 +16,10 @@ cc.Class({
             default: null,
             type: cc.ProgressBar
         },
-        rate: 0.05,
+        spriteFrame: {
+            default: null,
+            type: cc.SpriteFrame
+        }
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -27,9 +30,25 @@ cc.Class({
 
     },
 
-    update(dt) {
-        this.energy_bar.progress -= this.rate * dt;
-        if (this.energy_bar.progress > 1) this.energy_bar.progress = 1;
-        if (this.energy_bar.progress < 0) this.energy_bar.progress = 0;
-    },
+    onCollisionEnter: function (other, self) {
+        if (other.node.name === 'friend' && self.tag == 0) {
+            console.log('heart');
+            this.energy_bar.progress += 0.5;
+            var heart = new cc.Node("heart");
+
+            var spr = heart.addComponent(cc.Sprite);
+            spr.spriteFrame = this.spriteFrame;
+            heart.x = 0;
+            heart.y = 0;
+
+            heart.setParent(this.node);
+
+            var rise = cc.moveBy(2, cc.v2(0, 50));
+            var fade = cc.fadeTo(2, 0);
+            heart.runAction(rise);
+            heart.runAction(fade);
+        }
+    }
+
+    // update (dt) {},
 });
