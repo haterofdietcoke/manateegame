@@ -997,7 +997,7 @@
     "_enabled": true,
     "x": 0,
     "y": 500,
-    "time": 2,
+    "move_time": 2,
     "_id": "7f6uzouKJErrsNmMB2MNtn"
   },
   {
@@ -2758,7 +2758,7 @@
     "_enabled": true,
     "x": 0,
     "y": 250,
-    "time": 10,
+    "move_time": 5,
     "_id": "0eKTB80zFNWqyC+LL0Ch3o"
   }
 ]
