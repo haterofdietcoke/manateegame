@@ -2,7 +2,15 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-
+        x: {
+            default: 0
+        },
+        y: {
+            default: 500
+        },
+        move_time: {
+            default: 2
+        },
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -10,8 +18,8 @@ cc.Class({
     // onLoad () {},
 
     start () {
-        this.node.setPosition(0, 500);
-        var moveTo = cc.moveTo(2, 1100, 500);
+        this.node.setPosition(this.x, this.y);
+        var moveTo = cc.moveTo(this.move_time, 1100, this.y);
         var time = cc.delayTime(Math.random() * 3 + 2);
         var moveBack = cc.moveTo(0, 0, 500);
         var seq = cc.sequence(moveTo, time, moveBack);
