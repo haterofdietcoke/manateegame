@@ -12,7 +12,11 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        speed: 10
+        speed: 200,
+        manatee: {
+            default: null,
+            type: cc.Node
+        }
 	},
 
     onLoad: function () {
@@ -30,16 +34,16 @@ cc.Class({
     onKeyDown: function moveManatee(event) {
         switch(event.keyCode) {
             case cc.macro.KEY.a:
-                this.node.x -= this.speed;
+                this.node.x = this.manatee.x - this.speed;
                 break;
             case cc.macro.KEY.d:
-                this.node.x += this.speed;
+                this.node.x = this.manatee.x + this.speed;
                 break;
             case cc.macro.KEY.w:
-                this.node.y += this.speed
+                this.node.y = this.manatee.y + this.speed;
                 break;
             case cc.macro.KEY.s:
-                this.node.y -= this.speed;
+                this.node.y = this.manatee.y - this.speed;
                 break;
         }
     },
