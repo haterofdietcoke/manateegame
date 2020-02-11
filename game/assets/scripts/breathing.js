@@ -63,10 +63,15 @@ cc.Class({
     update: function (dt) {
         var progressBar = this.getComponent(cc.ProgressBar)
         var progress = progressBar.progress;
+        if (progress <= 0) {
+            cc.director.loadScene("gameover")
+        }
         if (progress > 0) {
             progress -= this.decrease * dt;
         }
-        
+        if (progress <= 0) {
+            cc.director.loadScene("gameover")
+        }
         this.breath_location.getParent().convertToWorldSpaceAR(this.manatee.getPosition())
         var distance = this.breath_location.y - this.manatee.y
         distance = Math.abs(distance)
