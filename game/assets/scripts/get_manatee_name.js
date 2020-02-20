@@ -12,13 +12,8 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        sand: {
-            default: null,
-            type: cc.Node
-        }
-        water: {
-            default: null,
-            type: cc.Node
+        default_name: {
+            default: "Dumpling"
         }
     },
 
@@ -26,10 +21,25 @@ cc.Class({
 
     // onLoad () {},
 
-    start() {
-        x_value = cc.Node.x;
-
+    start () {
+        script_name = cc.getComponent(cc.Label)
     },
 
-    // update (dt) {},
+    onKeyDown: function (event) {
+    },
+
+    onKeyUp: function (event) {
+
+        if (event.key.toUpperCase() != event.key.toLowerCase()) {
+            name += event.key;
+        } else if (event.key == Enter || event.key == Return) {
+            if (name == "") {
+                name = default_name;
+            }
+            scenes = ["low_water", "playscene"];
+            choice = (Math.random() * scenes.length).toPrecision(1);
+            console.log(name);
+            cc.director.loadScene("playscene")
+        }
+    }
 });

@@ -351,6 +351,12 @@
     "_components": [
       {
         "__id__": 9
+      },
+      {
+        "__id__": 10
+      },
+      {
+        "__id__": 11
       }
     ],
     "_prefab": null,
@@ -364,7 +370,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 220.1,
+      "width": 0,
       "height": 50.4
     },
     "_anchorPoint": {
@@ -415,8 +421,8 @@
       }
     ],
     "_useOriginalSize": false,
-    "_string": "Name here: ",
-    "_N$string": "Name here: ",
+    "_string": "",
+    "_N$string": "",
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -430,5 +436,27 @@
     "_N$overflow": 0,
     "_N$cacheMode": 0,
     "_id": "9cR2wcm7tFCocWfgmFndXm"
+  },
+  {
+    "__type__": "0837fFzzzJMFr0a8xXna71J",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 8
+    },
+    "_enabled": true,
+    "low_water": null,
+    "_id": "a4Xuo354dG94CPyMIiTeSX"
+  },
+  {
+    "__type__": "564ebvidK1ER6oFn8t6uC2A",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 8
+    },
+    "_enabled": true,
+    "default_name": "Dumpling",
+    "_id": "1bsWIzhjtE/5i2xZPOrVzE"
   }
 ]

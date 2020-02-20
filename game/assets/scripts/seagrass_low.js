@@ -10,40 +10,31 @@
 
 cc.Class({
     extends: cc.Component,
-    
+
     properties: {
-        spriteFrame: {
-            default: null,
-            type: cc.SpriteFrame
-        },
-        amount_of_grass: {
-            default: 100
-        }
+        // foo: {
+        //     // ATTRIBUTES:
+        //     default: null,        // The default value will be used only when the component attaching
+        //                           // to a node for the first time
+        //     type: cc.SpriteFrame, // optional, default is typeof default
+        //     serializable: true,   // optional, default is true
+        // },
+        // bar: {
+        //     get () {
+        //         return this._bar;
+        //     },
+        //     set (value) {
+        //         this._bar = value;
+        //     }
+        // },
     },
 
     // LIFE-CYCLE CALLBACKS:
 
     // onLoad () {},
 
-    start() {
-        var i;
-        for (i = 0; i < this.amount_of_grass; i++) {
-            var newgrass = new cc.Node('grass');
+    start () {
 
-            var collider = newgrass.addComponent(cc.CircleCollider);
-            collider.radius = 2;
-
-            var sp = newgrass.addComponent(cc.Sprite);
-            sp.spriteFrame = this.spriteFrame;
-            var x = Math.random() * 860 + 30;
-            var y = Math.random() * 120 + 15;
-            newgrass.x = x;
-            newgrass.y = y;
-            newgrass.scale = 2;
-
-            newgrass.parent = this.node;
-
-        }
     },
 
     // update (dt) {},

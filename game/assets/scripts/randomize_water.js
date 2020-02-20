@@ -10,15 +10,20 @@
 
 cc.Class({
     extends: cc.Component,
-    
+
     properties: {
-        spriteFrame: {
-            default: null,
-            type: cc.SpriteFrame
+        low_water: {
+            type: cc.Scene,
+            default: null
         },
-        amount_of_grass: {
-            default: 100
-        }
+        high_water: {
+            type: cc.Scene,
+            default: null
+        },
+        medium_water: {
+            type: cc.Scene,
+            default: null
+        },
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -26,24 +31,10 @@ cc.Class({
     // onLoad () {},
 
     start() {
-        var i;
-        for (i = 0; i < this.amount_of_grass; i++) {
-            var newgrass = new cc.Node('grass');
+        var choices = [low_water, high_water, medium_water];
+        var choice = Math.floor(Math.random() * choices.length);
+        rcc.director.loadScene(choices[choice]);
 
-            var collider = newgrass.addComponent(cc.CircleCollider);
-            collider.radius = 2;
-
-            var sp = newgrass.addComponent(cc.Sprite);
-            sp.spriteFrame = this.spriteFrame;
-            var x = Math.random() * 860 + 30;
-            var y = Math.random() * 120 + 15;
-            newgrass.x = x;
-            newgrass.y = y;
-            newgrass.scale = 2;
-
-            newgrass.parent = this.node;
-
-        }
     },
 
     // update (dt) {},
