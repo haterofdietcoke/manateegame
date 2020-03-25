@@ -914,8 +914,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        100.795,
-        232.314,
+        145.115,
+        279.8,
         0,
         0,
         0,
@@ -1184,7 +1184,7 @@
     },
     "_enabled": true,
     "x": -100,
-    "y": 220,
+    "y": 240,
     "move_time": 3,
     "delay_time": 1,
     "chance_move_faster": 0.4,
@@ -2392,7 +2392,7 @@
       "ctor": "Float64Array",
       "array": [
         449.702,
-        210.346,
+        248.334,
         0,
         0,
         0,

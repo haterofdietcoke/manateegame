@@ -12,11 +12,21 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        energy_bar: {
-            default: null,
-            type: cc.ProgressBar
-        },
-        rate: 0.05,
+        // foo: {
+        //     // ATTRIBUTES:
+        //     default: null,        // The default value will be used only when the component attaching
+        //                           // to a node for the first time
+        //     type: cc.SpriteFrame, // optional, default is typeof default
+        //     serializable: true,   // optional, default is true
+        // },
+        // bar: {
+        //     get () {
+        //         return this._bar;
+        //     },
+        //     set (value) {
+        //         this._bar = value;
+        //     }
+        // },
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -27,9 +37,5 @@ cc.Class({
 
     },
 
-    update(dt) {
-        this.energy_bar.progress -= this.rate * dt;
-        if (this.energy_bar.progress > 1) this.energy_bar.progress = 1;
-        if (this.energy_bar.progress <= 0) cc.director.loadScene("gameover");
-    },
+    // update (dt) {},
 });

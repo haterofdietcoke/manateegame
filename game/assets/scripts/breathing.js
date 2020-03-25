@@ -70,6 +70,8 @@ cc.Class({
             progress -= this.decrease * dt;
         }
         if (progress <= 0) {
+            var tint = cc.repeat(cc.sequence(cc.tintTo(0.25, 255, 0, 0), cc.tintTo(0.25, 255, 255, 255)), 3);
+            this.node.runAction(tint);
             cc.director.loadScene("gameover")
         }
         this.breath_location.getParent().convertToWorldSpaceAR(this.manatee.getPosition())
