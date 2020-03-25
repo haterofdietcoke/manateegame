@@ -13,17 +13,17 @@ cc.Class({
 
     properties: {
         low_water: {
-            type: cc.Scene,
-            default: null
+            default: "shallow_water"
         },
         high_water: {
-            type: cc.Scene,
-            default: null
+            default: "deep_water"
         },
         medium_water: {
-            type: cc.Scene,
-            default: null
+            default: "medium_water"
         },
+        delay: {
+            default: 60
+        }
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -31,9 +31,11 @@ cc.Class({
     // onLoad () {},
 
     start() {
-        var choices = [low_water, high_water, medium_water];
+        var choices = ["shallow_water", "deep_water", "medium_water"];
         var choice = Math.floor(Math.random() * choices.length);
-        rcc.director.loadScene(choices[choice]);
+        var action = cc.delayTime(this.delay);
+        var seq = cc.sequence(cc.delayTime(this.delay), cc.callFunc(() => cc.director.loadScene(choices[choice])));
+        this.node.runAction(seq);
 
     },
 
