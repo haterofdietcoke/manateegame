@@ -1,10 +1,8 @@
 {
   "title": "Dumpling_the_Manatee",
   "packageName": "",
-  "startScene": "e29297b9-6a04-40a6-bace-8016ca509a03",
-  "excludeScenes": [
-    "fc969078-0ccf-4170-86c2-f0aec9ccb7dc"
-  ],
+  "startScene": "3b510e83-4b5c-4f41-9ad1-07e70b5fb841",
+  "excludeScenes": [],
   "includeSDKBox": false,
   "orientation": {
     "landscapeLeft": true,

@@ -34,8 +34,7 @@ cc.Class({
     // onLoad () {},
 
     start () {
-        var tint = cc.repeat(cc.sequence(cc.tintTo(0.50, 50, 0, 255), cc.tintTo(0.50, 0, 0, 255)), 3);
-        this.node.runAction(tint);
+
     },
 
     // update (dt) {},

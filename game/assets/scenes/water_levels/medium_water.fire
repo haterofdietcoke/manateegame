@@ -180,7 +180,7 @@
       "array": [
         0,
         0,
-        209.72248968796455,
+        217.37237634989413,
         0,
         0,
         0,
@@ -1565,7 +1565,7 @@
     "spriteFrame": {
       "__uuid__": "d7afee7c-0d8e-413f-b389-c8702803ada1"
     },
-    "amount_of_grass": 500,
+    "amount_of_grass": 10000,
     "_id": "1as8zNoodEgIHgg0KOt1WP"
   },
   {
