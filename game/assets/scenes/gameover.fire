@@ -20,7 +20,7 @@
         "__id__": 41
       },
       {
-        "__id__": 46
+        "__id__": 47
       }
     ],
     "_active": true,
@@ -177,7 +177,7 @@
       "array": [
         0,
         0,
-        217.37237634989413,
+        216.50635094610968,
         0,
         0,
         0,
@@ -1652,6 +1652,9 @@
       },
       {
         "__id__": 45
+      },
+      {
+        "__id__": 46
       }
     ],
     "_prefab": null,
@@ -1763,7 +1766,7 @@
     "_groupIndex": 0,
     "groupIndex": 0,
     "showInEditor": false,
-    "_id": "e5x9CGG09Jg5eM8NAVD1Yt"
+    "_id": "5el/vz4mdKT5CljJhHPy94"
   },
   {
     "__type__": "cc.Label",
@@ -1793,7 +1796,7 @@
     "_N$fontFamily": "Arial",
     "_N$overflow": 0,
     "_N$cacheMode": 0,
-    "_id": "d2I+6aBfZKRKPNLPc0Y5Si"
+    "_id": "c4pGiur39DQpCYoR753vVm"
   },
   {
     "__type__": "cc.RichText",
@@ -1830,6 +1833,24 @@
     "_id": "89PDPUxsRKIoH1ju5Lnl5a"
   },
   {
+    "__type__": "cc.AudioSource",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 41
+    },
+    "_enabled": true,
+    "_clip": {
+      "__uuid__": "077833a4-0eb9-4ab7-b9d5-319194261fbd"
+    },
+    "_volume": 1,
+    "_mute": false,
+    "_loop": false,
+    "playOnLoad": true,
+    "preload": false,
+    "_id": "7d8sn5JVNDVYHRfHaispwk"
+  },
+  {
     "__type__": "cc.Node",
     "_name": "manatee",
     "_objFlags": 0,
@@ -1839,9 +1860,6 @@
     "_children": [],
     "_active": true,
     "_components": [
-      {
-        "__id__": 47
-      },
       {
         "__id__": 48
       },
@@ -1865,6 +1883,9 @@
       },
       {
         "__id__": 55
+      },
+      {
+        "__id__": 56
       }
     ],
     "_prefab": null,
@@ -1920,7 +1941,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 46
+      "__id__": 47
     },
     "_enabled": true,
     "_materials": [
@@ -1954,7 +1975,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 46
+      "__id__": 47
     },
     "_enabled": false,
     "target": null,
@@ -1968,7 +1989,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 46
+      "__id__": 47
     },
     "_enabled": true,
     "_defaultClip": {
@@ -1987,7 +2008,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 46
+      "__id__": 47
     },
     "_enabled": true,
     "tag": 0,
@@ -2160,7 +2181,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 46
+      "__id__": 47
     },
     "_enabled": true,
     "tag": 1,
@@ -2177,7 +2198,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 46
+      "__id__": 47
     },
     "_enabled": false,
     "breath_bar": null,
@@ -2188,7 +2209,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 46
+      "__id__": 47
     },
     "_enabled": false,
     "source": null,
@@ -2200,7 +2221,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 46
+      "__id__": 47
     },
     "_enabled": false,
     "energy_bar": null,
@@ -2212,7 +2233,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 46
+      "__id__": 47
     },
     "_enabled": false,
     "energy_bar": null,

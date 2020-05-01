@@ -29,7 +29,7 @@
         "__id__": 53
       },
       {
-        "__id__": 69
+        "__id__": 70
       }
     ],
     "_active": true,
@@ -180,7 +180,7 @@
       "array": [
         0,
         0,
-        209.72248968796455,
+        217.37237634989413,
         0,
         0,
         0,
@@ -1817,7 +1817,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 68
+        "__id__": 69
       }
     ],
     "_prefab": null,
@@ -1904,6 +1904,9 @@
       },
       {
         "__id__": 67
+      },
+      {
+        "__id__": 68
       }
     ],
     "_prefab": null,
@@ -2715,6 +2718,24 @@
     "_id": "26f0GwZ4FG26AFsiyl/qFl"
   },
   {
+    "__type__": "cc.AudioSource",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 47
+    },
+    "_enabled": true,
+    "_clip": {
+      "__uuid__": "5e861594-6035-480c-85d7-1b0297286ee4"
+    },
+    "_volume": 1,
+    "_mute": false,
+    "_loop": true,
+    "playOnLoad": true,
+    "preload": true,
+    "_id": "f5TaiPyexGk5ZzddZKdDhT"
+  },
+  {
     "__type__": "42c90pu4AdNWqY76/HRdcxk",
     "_name": "",
     "_objFlags": 0,
@@ -2738,9 +2759,6 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 70
-      },
-      {
         "__id__": 71
       },
       {
@@ -2748,6 +2766,9 @@
       },
       {
         "__id__": 73
+      },
+      {
+        "__id__": 74
       }
     ],
     "_prefab": null,
@@ -2803,7 +2824,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 69
+      "__id__": 70
     },
     "_enabled": true,
     "_materials": [
@@ -2837,7 +2858,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 69
+      "__id__": 70
     },
     "_enabled": true,
     "_defaultClip": {
@@ -2856,7 +2877,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 69
+      "__id__": 70
     },
     "_enabled": true,
     "tag": 0,
@@ -3044,7 +3065,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 69
+      "__id__": 70
     },
     "_enabled": true,
     "x": 0,

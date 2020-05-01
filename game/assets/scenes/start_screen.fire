@@ -174,7 +174,7 @@
       "array": [
         0,
         0,
-        217.5257438248136,
+        216.50635094610968,
         0,
         0,
         0,
@@ -1955,7 +1955,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Try Again",
+    "_name": "PlayGame",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
@@ -2350,6 +2350,9 @@
     "_components": [
       {
         "__id__": 59
+      },
+      {
+        "__id__": 60
       }
     ],
     "_prefab": null,
@@ -2429,5 +2432,23 @@
     "_N$overflow": 0,
     "_N$cacheMode": 0,
     "_id": "bfDT0CdelGrbqHNvXqVdN7"
+  },
+  {
+    "__type__": "cc.AudioSource",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 58
+    },
+    "_enabled": true,
+    "_clip": {
+      "__uuid__": "5e861594-6035-480c-85d7-1b0297286ee4"
+    },
+    "_volume": 1,
+    "_mute": false,
+    "_loop": false,
+    "playOnLoad": false,
+    "preload": false,
+    "_id": "faa3u5dR9JgJh1NHRN4jGs"
   }
 ]
