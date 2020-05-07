@@ -1,0 +1,3 @@
+window.Global = {
+    name: "Dumpling",
+};
