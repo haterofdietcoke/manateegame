@@ -18,7 +18,12 @@ cc.Class({
         name_input: {
             default: "Name your manatee: "
         },
-
+        count: {
+            default: 0,
+        },
+        display: {
+            default: "Name your manatee: ",
+        },
     },
 
     onLoad: function () {
@@ -35,9 +40,15 @@ cc.Class({
 
     onKeyDown: function moveManatee(event) {
         if (event.keyCode >= 65 && event.keyCode <= 90) {
+
             this.manatee_name += String.fromCharCode(event.keyCode);
-            this.name_input += String.fromCharCode(event.keyCode);
-            console.log(this.name_input);
+            this.manatee_name = this.manatee_name.toLowerCase();
+            this.manatee_name = this.manatee_name.charAt(0).toUpperCase() + this.manatee_name.slice(1);
+            this.display = this.name_input + this.manatee_name;
+            var label = this.node.getComponent(cc.Label);
+            label.string = this.display;
+            console.log(this.manatee_name);
+            this.count += 1;
         } else if (event.keyCode == 13) {
             if (this.manatee_name == "") {
                 this.manatee_name = "Dumpling";
@@ -45,6 +56,15 @@ cc.Class({
             Global.name = this.manatee_name;
             console.log(Global.name);
             cc.director.loadScene("start_screen");
+        } else if (event.keyCode == 8) {
+            var temp = "";
+            for (var i = 0; i < this.manatee_name.length - 1; i++) {
+                temp += this.manatee_name[i];
+            }
+            this.manatee_name = temp;
+            this.display = this.name_input + this.manatee_name;
+            var label = this.node.getComponent(cc.Label);
+            label.string = this.display;
         }
     },
 });

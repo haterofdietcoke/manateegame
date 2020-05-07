@@ -174,7 +174,7 @@
       "array": [
         0,
         0,
-        216.50635094610968,
+        224.30057958016963,
         0,
         0,
         0,
@@ -2353,6 +2353,9 @@
       },
       {
         "__id__": 60
+      },
+      {
+        "__id__": 61
       }
     ],
     "_prefab": null,
@@ -2450,5 +2453,15 @@
     "playOnLoad": false,
     "preload": false,
     "_id": "faa3u5dR9JgJh1NHRN4jGs"
+  },
+  {
+    "__type__": "1d75a1yKb1B75RT8XPJ3M7Y",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 58
+    },
+    "_enabled": true,
+    "_id": "4dze7CpLVNX6aD19Vh2ygs"
   }
 ]
