@@ -7,7 +7,6 @@
 // Learn life-cycle callbacks:
 //  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
 //  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
-
 cc.Class({
     extends: cc.Component,
 
@@ -59,7 +58,10 @@ cc.Class({
             }
             Global.name = this.manatee_name;
             console.log(Global.name);
-            cc.director.loadScene("start_screen");
+            var choices = ["shallow_water", "deep_water", "medium_water"];
+            var choice = Math.floor(Math.random() * choices.length);
+            cc.director.loadScene(choices[choice]);
+            
         } else if (event.keyCode == 8) {
             var temp = "";
             for (var i = 0; i < this.manatee_name.length - 1; i++) {
