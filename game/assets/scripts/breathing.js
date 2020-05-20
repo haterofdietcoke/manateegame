@@ -64,6 +64,7 @@ cc.Class({
         var progressBar = this.getComponent(cc.ProgressBar)
         var progress = progressBar.progress;
         if (progress <= 0) {
+            cc.audioEngine.stopAll();
             cc.director.loadScene("gameover")
         }
         if (progress > 0) {

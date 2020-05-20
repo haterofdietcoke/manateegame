@@ -26,15 +26,16 @@ cc.Class({
         this.label.string = "Save";
     },
     start: function () {
+        cc.audioEngine.stopAll();
         var audioID = cc.audioEngine.play(this.music, true, 0.5)
     },
     callback: function (button) {
         // do whatever you want with button
         // In addition, attention to this way registered events, can not pass customEventData
-        
+        var audioID = cc.audioEngine.resume(audioID);
         console.log("Clicked");
         if (!this.paused) {
-            cc.audioEngine.stop(this.music);
+            cc.audioEngine.pauseAll();
             this.paused = true;
             console.log("Pausing");
             this.label.string = "Resume";
@@ -42,10 +43,9 @@ cc.Class({
         } else {
             console.log("Resume");
             this.paused = false;
-            var audioID = cc.audioEngine.resume(this.music, true, 0.5);
+            var audioID = cc.audioEngine.resumeAll();
             this.label.string = "Save";
             cc.director.resume();
-            cc.audioEngine.resumeAll();
         }
     },
 });

@@ -30,6 +30,9 @@ cc.Class({
     update(dt) {
         this.energy_bar.progress -= this.rate * dt;
         if (this.energy_bar.progress > 1) this.energy_bar.progress = 1;
-        if (this.energy_bar.progress <= 0) cc.director.loadScene("gameover");
+        if (this.energy_bar.progress <= 0) {
+            cc.audioEngine.stopAll();
+            cc.director.loadScene("gameover");
+        }
     },
 });
