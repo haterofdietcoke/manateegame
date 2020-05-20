@@ -24,6 +24,10 @@ cc.Class({
         display: {
             default: "Name your manatee: ",
         },
+        label: {
+            default: null,
+            type: cc.Label
+        }
     },
 
     onLoad: function () {
@@ -45,8 +49,8 @@ cc.Class({
             this.manatee_name = this.manatee_name.toLowerCase();
             this.manatee_name = this.manatee_name.charAt(0).toUpperCase() + this.manatee_name.slice(1);
             this.display = this.name_input + this.manatee_name;
-            var label = this.node.getComponent(cc.Label);
-            label.string = this.display;
+            this.label.string = this.manatee_name;
+            Global.name = this.manatee_name;
             console.log(this.manatee_name);
             this.count += 1;
         } else if (event.keyCode == 13) {
