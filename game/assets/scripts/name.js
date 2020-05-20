@@ -66,9 +66,7 @@ cc.Class({
                 temp += this.manatee_name[i];
             }
             this.manatee_name = temp;
-            this.display = this.name_input + this.manatee_name;
-            var label = this.node.getComponent(cc.Label);
-            label.string = this.display;
+            this.label.string = this.manatee_name;
         }
     },
 });
