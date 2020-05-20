@@ -174,7 +174,7 @@
       "array": [
         0,
         0,
-        224.30057958016963,
+        224.47860833060366,
         0,
         0,
         0,
@@ -2066,7 +2066,7 @@
       "ctor": "Float64Array",
       "array": [
         -6.331000000000017,
-        -18.994,
+        -18.994000000000028,
         0,
         0,
         0,
@@ -2074,7 +2074,7 @@
         1,
         1,
         1,
-        0
+        1
       ]
     },
     "_eulerAngles": {
@@ -2133,10 +2133,10 @@
     "alignMode": 0,
     "_target": null,
     "_alignFlags": 45,
-    "_left": -106.331,
-    "_right": -93.669,
-    "_top": -11.006,
-    "_bottom": -48.994,
+    "_left": -106.33100000000002,
+    "_right": -93.66899999999998,
+    "_top": -11.005999999999972,
+    "_bottom": -48.99400000000003,
     "_verticalCenter": 0,
     "_horizontalCenter": 0,
     "_isAbsLeft": true,
@@ -2326,7 +2326,7 @@
     "_id": "11NZ9pJmlPUaW3ufKtYc7+"
   },
   {
-    "__type__": "3f23fDcH91BLI4DyyOg4Bef",
+    "__type__": "43bfbfutG1KH4ICMZMe8ShX",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -2336,7 +2336,7 @@
     "button": {
       "__id__": 56
     },
-    "_id": "a5skUtTYBDKo4eaHKoexl7"
+    "_id": "3fImNTa5xJBbVedZq4Ft+H"
   },
   {
     "__type__": "cc.Node",
